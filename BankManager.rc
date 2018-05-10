@@ -1,0 +1,401 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\BankManager.rc2""  // 非 Microsoft Visual C++ 编辑过的资源\r\n"
+    "#include ""afxres.rc""         // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BankManager.ico"
+IDI_KEY1ICO             ICON                    "res\\Keymanager1.ico"
+IDI_KEY2ICO             ICON                    "res\\Keymanager2.ico"
+IDI_CANCELICO           ICON                    "res\\Cancel.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "关于 BankManager"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "BankManager Version 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_BANKMANAGER_DIALOG DIALOGEX 0, 0, 371, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "BankManager"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "操作选择区",IDC_CHOOSESTC,4,19,69,222
+    LTEXT           "银行管理模拟系统",IDC_STATIC,157,7,57,8
+    CONTROL         "用户存款(&S)",IDC_SAVINGCHK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,67,64,29
+    CONTROL         "用户注册(&L)",IDC_LOGINCHK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,35,64,29
+    CONTROL         "修改密码(&M)",IDC_CHANGEPWCHK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,142,64,29
+    CONTROL         "用户取款(&F)",IDC_FETCHCHK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,106,64,29
+    CONTROL         "交易查询(&B)",IDC_EXCHANGECHK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,179,64,29
+    CONTROL         "用户销户(&D)",IDC_DELETEUSERCHK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,209,64,29
+    GROUPBOX        "工作区",IDC_WORKSTC,72,19,296,222
+    PUSHBUTTON      "退出(&C)",IDC_CANCELBTN,305,243,63,15
+END
+
+IDD_LOGIN_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "注册信息栏",IDC_STATIC,6,24,328,101
+    LTEXT           "用户注册页",IDC_STATIC,150,10,41,8
+    LTEXT           "申请所在地：",IDC_STATIC,16,37,49,8
+    GROUPBOX        "个人信息栏",IDC_STATIC,6,52,328,73
+    LTEXT           "用户姓名：",IDC_STATIC,39,64,41,8
+    EDITTEXT        IDC_NAME_EDT,86,61,58,13,ES_AUTOHSCROLL
+    LTEXT           "身份证号码：",IDC_STATIC,161,64,55,8
+    EDITTEXT        IDC_IDENTITY_EDT,216,62,105,13,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "用户性别：",IDC_STATIC,38,85,41,8
+    LTEXT           "移动电话：",IDC_STATIC,161,85,41,8
+    EDITTEXT        IDC_PHONE_EDT,216,83,105,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "账号密码：",IDC_STATIC,37,108,41,8
+    GROUPBOX        "密码输入栏",IDC_STATIC,6,96,328,29
+    EDITTEXT        IDC_PASS_EIT,97,106,184,13,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "省",IDC_STATIC,119,37,9,8
+    LTEXT           "市",IDC_STATIC,202,37,9,8
+    COMBOBOX        IDC_CANTON_COMB,62,34,53,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SECTION_COMB,130,34,67,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SEX_COMB,85,83,59,39,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LOGIN_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,148,326,49
+    LTEXT           "用户输入信息列表",IDC_STATIC,138,133,65,8
+    PUSHBUTTON      "注册申请(&R)",IDC_LOGIN_BTN,8,202,117,41
+    LTEXT           "账号类型：",IDC_STATIC,222,37,41,8
+    GROUPBOX        "",IDC_STATIC,218,24,116,34
+    COMBOBOX        IDC_TYPE_COMB,265,35,59,39,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "取消(&C)",IDC_CANCEL_BTN,215,202,117,41
+END
+
+IDD_SAVING_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "用户验证信息栏",IDC_STATIC,6,21,328,90
+    LTEXT           "用户存款页",IDC_STATIC,150,8,41,8
+    COMBOBOX        IDC_TYPE_COMB,99,64,59,39,CBS_DROPDOWNLIST | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SAVING_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,138,326,55
+    LTEXT           "用户存款信息列表",IDC_STATIC,138,122,65,8
+    PUSHBUTTON      "存款申请(&C)",IDC_SAVING_BTN,8,201,117,41
+    LTEXT           "存款类型：",IDC_STATIC,33,68,41,8
+    LTEXT           "银行账号：",IDC_STATIC,34,41,41,8
+    EDITTEXT        IDC_CARDID_EDT,99,39,136,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MONEY_EDT,99,87,59,15,ES_AUTOHSCROLL
+    LTEXT           "存款金额：",IDC_STATIC,33,91,50,15
+    LTEXT           "定期时限：",IDC_TIME_STC,171,67,41,8
+    COMBOBOX        IDC_TIME_COMB,222,65,81,75,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "利率(元)：",IDC_STATIC,170,91,41,8
+    LTEXT           "",IDC_RATE_EDT,222,92,79,10
+    GROUPBOX        "",IDC_STATIC,166,78,168,33
+    PUSHBUTTON      "取消(&C)",IDC_CANCEL_BTN,215,201,117,41
+END
+
+IDD_FETCH_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | DS_CENTER | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "用户验证信息栏",IDC_STATIC,6,21,328,90
+    CONTROL         "",IDC_FETCH_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,138,326,55
+    LTEXT           "用户存款信息列表",IDC_STATIC,138,122,65,8
+    PUSHBUTTON      "取款申请(&F)",IDC_FETCH_BTN,7,199,117,41
+    LTEXT           "银行帐号：",IDC_STATIC,34,41,41,8
+    EDITTEXT        IDC_CARDID_EDT,99,39,136,13,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MONEY_EDT,99,60,59,15,ES_AUTOHSCROLL
+    LTEXT           "取款金额：",IDC_FETCH_STC,33,63,41,8
+    LTEXT           "账号密码：",IDC_STATIC,34,95,41,8
+    EDITTEXT        IDC_PASS_EDT,99,91,135,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "密码输入栏",IDC_STATIC,6,82,328,29
+    LTEXT           "用户取款页",IDC_STATIC,150,8,41,8
+    CTEXT           "活期(01)||定期(02)",IDC_STATIC,243,42,73,8
+    PUSHBUTTON      "取消(&C)",IDC_CANCEL_BTN,213,201,120,39
+END
+
+IDD_MODIFY_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "用户验证信息栏",IDC_STATIC,6,16,328,66
+    CONTROL         "",IDC_USER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,99,326,44
+    LTEXT           "用户信息列表",IDC_STATIC,138,87,49,8
+    PUSHBUTTON      "申请密码修改(&P)",IDC_PASS_BTN,7,199,117,41
+    LTEXT           "银行帐号：",IDC_STATIC,34,33,41,8
+    EDITTEXT        IDC_CARDID_EDT,99,29,136,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "旧账号密码：",IDC_STATIC,34,63,49,8
+    EDITTEXT        IDC_PASS_EDT,99,60,135,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "旧密码输入栏",IDC_STATIC,6,48,328,34
+    LTEXT           "密码修改页",IDC_STATIC,150,8,41,8
+    CTEXT           "活期(01)||定期(02)",IDC_STATIC,243,33,73,8
+    LTEXT           "新账号密码：",IDC_NEWP_STC,35,167,49,8
+    EDITTEXT        IDC_NEWPASS_EDT,100,167,135,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "新密码输入栏",IDC_NEW_STC,7,149,328,43
+    PUSHBUTTON      "取消(&C)",IDC_CANCEL_BTN,217,199,117,41
+END
+
+IDD_BOWER_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "用户验证信息栏",IDC_STATIC,0,30,87,146
+    CONTROL         "",IDC_USER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,89,34,253,209
+    LTEXT           "交易信息列表",IDC_STATIC,206,20,49,8
+    LTEXT           "银行帐号：",IDC_STATIC,24,56,41,8
+    EDITTEXT        IDC_CARDID_EDT,0,78,87,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "账号密码：",IDC_STATIC,21,127,41,8
+    EDITTEXT        IDC_PASS_EDT,0,149,87,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "密码输入栏",IDC_STATIC,0,110,87,66
+    LTEXT           "交易查询页",IDC_STATIC,150,8,41,8
+    PUSHBUTTON      "打印预览(&P)",IDC_PRINT_BTN,0,179,87,28
+    PUSHBUTTON      "清空数据(&E)",IDC_EMPTY_BTN,0,214,87,28
+END
+
+IDD_DELETE_PAGE DIALOGEX 0, 0, 342, 248
+STYLE DS_SETFONT | WS_CHILD | WS_BORDER
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "用户验证信息栏",IDC_STATIC,6,19,328,92
+    CONTROL         "",IDC_USER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,142,326,47
+    LTEXT           "用户信息列表",IDC_STATIC,138,121,49,8
+    LTEXT           "银行帐号：",IDC_STATIC,34,40,41,8
+    EDITTEXT        IDC_CARDID_EDT,99,38,136,13,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "账号密码：",IDC_STATIC,34,85,41,8
+    EDITTEXT        IDC_PASS_EDT,99,82,135,14,ES_CENTER | ES_PASSWORD | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "密码输入栏",IDC_STATIC,6,62,328,49
+    LTEXT           "用户注销页",IDC_STATIC,150,8,41,8
+    CTEXT           "活期(01)||定期(02)",IDC_STATIC,243,41,73,8
+    PUSHBUTTON      "销户申请(&D)",IDC_DELETE_BTN,8,199,107,39
+    PUSHBUTTON      "取消(&C)",IDC_CANCEL_BTN,225,199,107,39
+END
+
+IDD_CHECKPRINT_DLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "是否打印操作"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "打印选择页面",IDC_STATIC,68,5,49,8
+    GROUPBOX        "",IDC_STATIC,7,19,171,39
+    LTEXT           "       如果你想打印当前页面表格中的数据，请按下“打印”，若如不需要，请关闭该窗口或者按下“取消”。",
+                    IDC_STATIC,15,27,149,27
+    PUSHBUTTON      "打印",IDOK,7,64,63,22
+    PUSHBUTTON      "取消",IDC_CLOSE_BTN,107,64,71,21
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "BankManager.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "BankManager.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "翻译", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BANKMANAGER_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 370
+    END
+
+    IDD_LOGIN_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+    END
+
+    IDD_SAVING_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+    END
+
+    IDD_FETCH_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+    END
+
+    IDD_BOWER_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+    END
+
+    IDD_DELETE_PAGE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 341
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 BankManager(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\BankManager.rc2"  // 非 Microsoft Visual C++ 编辑过的资源
+#include "afxres.rc"         // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
